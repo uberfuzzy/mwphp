@@ -16,6 +16,8 @@ The late state functions (the very finely niche functions) were written in the W
 
 An overall goal of trying to keep this working with *any* MediaWiki install was attempted, but as this code was mainly used against Wikia servers, and their *unique*  tweaks, I eventually made consessions about how things worked. Most of these should be marked in the code. They were usually involved in login and edit functions, if I remember correctly.
 
+Also, please keep in mind, that this was very private code. It was never meant to be read by non-uberfuzzy people. There may be vulgarities or in-jokes in the comments. Lots of ugly spaghetti code is in here. Lots and lots. Most of the ugly code started off as one-off scripts, that turned into two-off, then into a library function, so its all likely horribly ineffecient. I dont care, as long as "it worked".
+
 Modularized
 ===========
 

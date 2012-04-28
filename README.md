@@ -1,7 +1,9 @@
 mwphp
 =====
 
-a collection of php functions that wrap around the MediaWiki API and provide easy to use logical interfaces to sometimes complex logic, curl transports, and return codes.
+A collection of php functions that wrap around the MediaWiki API and provide easy to use logical interfaces to sometimes complex logic, curl transports, and return codes.
+
+There are also a few non-MediaWiki functions in here, that were things that I used in other projects, but also often used in one-off bots, so are included here for portability.
 
 History
 =======

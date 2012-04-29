@@ -1,4 +1,7 @@
 <?php
+/*
+	this was a glorified loop+lint tool
+*/
 $files = glob('*.php');
 
 $res = array(

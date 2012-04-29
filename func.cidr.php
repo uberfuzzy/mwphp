@@ -3,6 +3,7 @@
 this function preforms CIDR range matching
 
 written by users on stackoverflow.com, slightly tweaked.
+http://stackoverflow.com/questions/594112
 
 use examples:
 var_dump( cidr_match('127.1.2.3', '127.0.0.0/8') ); // match first left quad

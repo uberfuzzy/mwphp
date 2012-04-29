@@ -1,11 +1,32 @@
 <?php
 /******************************************************************************
- * code copyright 2008-2010 Chris L. Stafford, all rights reserved            *
- * for private use only.                                                      *
- * limited use/viewing granted for current employees of Wikia Inc.            *
- * code is maintained in a private svn, and subject to being changed at will. *
- * do not modify without permission                                           *
+    Copyright 2008-2010 Christopher L. Stafford
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
+
+/*
+	This was an early venture into the world of php OO coding.
+	I had functions previously that would loop fetch an entire category of entries,
+	but it would require buffering the entire array in memory, and did no support stop/resume.
+	I later had to work on some very very large categories, some not in EN, and other issues.
+	
+	General premise was that you would just continue to pull 1 item from the object until done.
+	The object would maintain its own buffer, and re-fetch when empty.
+	It provided some neat utility functions for filtering by namespace, and pre-maturly stopping.
+	The object also hid the magic needed for when NS6 != "Category" (like in DE)
+*/
 
 /*
 $cato = new CatObject($site, $cat);

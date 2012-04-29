@@ -1,11 +1,13 @@
 <?php
-/******************************************************************************
- * code copyright 2008-2010 Chris L. Stafford, all rights reserved            *
- * for private use only.                                                      *
- * limited use/viewing granted for current employees of Wikia Inc.            *
- * code is maintained in a private svn, and subject to being changed at will. *
- * do not modify without permission                                           *
- ******************************************************************************/
+/*
+	This was a master I AM LAZY method to include the ENTIRE library at once.
+	This was NOT recommended (it defeats the point of the design of the library),
+	but was available for very very fast rapid bot development.
+	
+	It is suggested that if you use this, once your code stablizes and is "done",
+	you use dump out get_included_files() from every path in your code,
+	sort+unique the list, and only include those.
+*/
 
 include_once "mw_api_get.php";
 include_once "mw_api_post.php";

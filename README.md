@@ -37,8 +37,10 @@ That being said, there was also always a hesitation about releasing this very po
 
 
 Warrenty, support, and the future
-=
+=================================
 
 I make no claim of warrenty or support for this code. I no longer work for Wikia, nor deal with MediaWiki on a regular basis, so dont really have a place to test this against very quickly. I also dont know how much of this will still work with current versions of MediaWiki. Its been many months since I used any of this code, and was many before that, that I wrote any new function, and I know both MediaWiki and Wikia have upgraded since. Good luck!
 
-I release this under some sort of open source license. I really dont know which. If you know of one that would be most compatible, let me know! Feel free to fork and continue etc, just maybe some sort of legacy credit would be nice, but required. Oh, and try not to do evil with it. :)
+I release this code under the terms of the GPL (see the COPYING file for details etc)! Feel free to fork and continue etc. Shoot me an email if you do, it would be nice to know it went on to good use.
+
+Oh, and try not to do evil with it. :)

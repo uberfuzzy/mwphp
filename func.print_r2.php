@@ -22,7 +22,7 @@
 function print_rr( $input, $return=false ) {
 	$lines = explode( "\n", print_r( $input, true ) );
 
-	$lines = array_slice( $lines, 2, -3 );
+	$lines = array_slice( $lines, 2, -2 );
 	foreach( $lines as &$line ) {
 		$line = substr($line, 4);
 	}

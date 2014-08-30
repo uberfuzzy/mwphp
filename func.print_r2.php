@@ -1,6 +1,6 @@
 <?php
 /******************************************************************************
-    Copyright 2012 Christopher L. Stafford
+    Copyright 2014 Christopher L. Stafford
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -19,18 +19,22 @@
 /*
  * Works the same as print_r, but without the leading "Array (", and trailing "), and left indent
  */
-function print_rr( $input, $return=false ) {
-	$lines = explode( "\n", print_r( $input, true ) );
-
-	$lines = array_slice( $lines, 2, -2 );
-	foreach( $lines as &$line ) {
-		$line = substr($line, 4);
+function print_rr($param, $return=false, $depth=0) {
+	if($return) {
+		if( (bool)ini_get('output_buffering') ) { ob_start(); }
 	}
-	$out = implode("\n", $lines) . "\n";
-
-	if( !empty($return) ) {
-		return $out;
-	} else {
-		print $out;
+	$self = __METHOD__;
+	foreach($param as $k=>$v ) {
+			print str_repeat("    ", $depth);
+			print "[{$k}] => ";
+		if( is_array($v) ) {
+			print "Array\n";
+			$self($v, false, $depth+1);
+		} else {
+			print $v . "\n";
+		}
 	}
+	if($return) {
+		if( (bool)ini_get('output_buffering') ) { return ob_get_clean(); }
+	};
 }
